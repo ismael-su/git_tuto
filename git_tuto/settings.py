@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'listings' #i add here the app listings for MVT architecure
+    # My Created Accounts
+    'listings', #i add here the app listings for MVT architecure
+    'accounts.apps.AccountsConfig',
 ]
 
 MIDDLEWARE = [
