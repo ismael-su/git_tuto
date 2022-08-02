@@ -1,1 +1,2 @@
-env/
+.venv-git-tuto/
+listings/__pycache__/
