@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # My Created Accounts
     'listings', #i add here the app listings for MVT architecure
-    'accounts.apps.AccountsConfig',
+    'tailwind', #the tailwind responssive
+    'theme'
 ]
 
 MIDDLEWARE = [
@@ -53,6 +54,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'git_tuto.urls'
+TAILWIND_APP_NAME = 'theme'
 
 TEMPLATES = [
     {
@@ -124,3 +126,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
