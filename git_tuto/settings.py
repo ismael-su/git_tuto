@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-2*^)0c)#84vqazyf47cg&s2c+3ocsi9=m8-&z-^+6nb=xb+sji
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
 ALLOWED_HOSTS = []
 
 
@@ -38,9 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # My Created Accounts
-    'listings', #i add here the app listings for MVT architecure
+
     'tailwind', #the tailwind responssive
-    'theme'
+    'theme',
+    'schools',
+    'django_browser_reload',
 ]
 
 MIDDLEWARE = [
@@ -51,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
 
 ROOT_URLCONF = 'git_tuto.urls'
