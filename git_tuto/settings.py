@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-2*^)0c)#84vqazyf47cg&s2c+3ocsi9=m8-&z-^+6nb=xb+sji
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
 ALLOWED_HOSTS = []
 
 
@@ -37,7 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'listings' #i add here the app listings for MVT architecure
+    # My Created Accounts
+
+    'tailwind', #the tailwind responssive
+    'theme',
+    'schools',
+    'django_browser_reload',
 ]
 
 MIDDLEWARE = [
@@ -48,9 +53,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
 
 ROOT_URLCONF = 'git_tuto.urls'
+TAILWIND_APP_NAME = 'theme'
 
 TEMPLATES = [
     {
@@ -122,3 +129,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]

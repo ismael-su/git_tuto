@@ -1,2 +1,5 @@
-.venv-git-tuto/
+.v.venv-git-tuto/
+listings/__pycache__-git-tuto/
+**/__pycache__/
 listings/__pycache__/
+**/*.pyc
